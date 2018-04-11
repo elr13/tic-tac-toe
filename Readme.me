@@ -1,0 +1,24 @@
+TICTACTOE
+
+To start the application run to the root directory and execute 'mvn spring-boot:run'
+here is a link to dowload maven if needed http://maven.apache.org/download.cgi
+The project is build with maven
+Configuration can be updated in the file '/config/application.properties'
+Configuration must look like the following:
+
+size=5
+human.player1.symbol=A
+human.player2.symbol=B
+computer.symbol=C
+
+Wrong configurations will stop application start.
+Symbols must be an unique char and I assume it must be different from '-'
+the size must be between 3 and 10 included.
+
+Java classes are distributed in different packages depending on their role.
+Board and players are loaded from beans.
+
+A game is started using spring scheduler. A new game is scheduled at the end of the game if players want to replay.
+Otherewise application exits.
+
+UnitTests are using Junit.

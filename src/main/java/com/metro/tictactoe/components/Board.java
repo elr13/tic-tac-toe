@@ -1,4 +1,4 @@
-package com.metro.tictactoe;
+package com.metro.tictactoe.components;
 
 public class Board {
 
@@ -15,6 +15,8 @@ public class Board {
 		calculatePrintedLimits(size);
 	}
 
+	
+	//calulate board border size
 	private void calculatePrintedLimits(int size) {
 
 		for (int i = 0; i < size; i++) {
@@ -24,6 +26,7 @@ public class Board {
 		}
 	}
 
+	//set default values to -
 	public void initializeBoard() {
 
 		for (int i = 0; i < size; i++) {
@@ -57,8 +60,9 @@ public class Board {
 		}
 	}
 
+	//mark a cell with a char
 	public boolean mark(Position pos, Player player) {
-
+		//check if in the board
 		if (pos.row < 0 || pos.row >= size || pos.col < 0 || pos.col >= size) {
 			System.out.println(pos.printPosition() +" is off the board");
 			return false;
@@ -70,6 +74,7 @@ public class Board {
 			return false;
 		}
 
+		//check if free cell
 		if (board[pos.row][pos.col] != '-') {
 
 			return false;
@@ -97,6 +102,7 @@ public class Board {
 		return board;
 	}
 
+	//check board is full
 	public boolean checkFullBoard() {
 
 		for (int i = 0; i < size; i++) {

@@ -1,4 +1,7 @@
-package com.metro.tictactoe;
+package com.metro.tictactoe.game;
+
+import com.metro.tictactoe.components.Board;
+import com.metro.tictactoe.components.Player;
 
 public class GameState {
 	
@@ -9,9 +12,9 @@ public class GameState {
 	public boolean checkWin(Player player, Board boardGame) {
 
 		char[][] board = boardGame.getBoard();
-		char symbol = player.symbol;
-		int x = boardGame.getLastPlayed().row;
-		int y = boardGame.getLastPlayed().col;
+		char symbol = player.getSymbol();
+		int x = boardGame.getLastPlayed().getRow();
+		int y = boardGame.getLastPlayed().getCol();
 		int n = boardGame.getSize();
 
 		// check verticals
@@ -119,7 +122,7 @@ public class GameState {
 	}
 
 	private void callWinner(Player player) {
-		System.out.println("Player " + player.symbol + " wins!");
+		System.out.println("Player " + player.getSymbol() + " wins!");
 
 	}
 }

@@ -11,6 +11,12 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.metro.tictactoe.components.Board;
+import com.metro.tictactoe.components.Player;
+import com.metro.tictactoe.components.Position;
+import com.metro.tictactoe.game.Game;
+import com.metro.tictactoe.game.GameState;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class WinTests {
